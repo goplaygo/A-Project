@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+  </head>
+  
+  <body>
+    <form name="form1" id="form1" method="post" action="/FCKeditor/servlet/addcontent">
+    标题：<input type="text" name="title" />
+    <!--下面的JavaScript代码是FCKeditor的主要创建代码--><br>
+ <textarea id="content" name="content"></textarea>
+<input type="submit" name="submit" value="提交" />
+    </form>
+    <script type="text/javascript">
+    var editor = null;
+    window.onload = function(){
+        editor = CKEDITOR.replace('content'); //参数‘content’是textarea元素的name属性值，而非id属性值
+    }
+</script>
+  </body>
+</html>
